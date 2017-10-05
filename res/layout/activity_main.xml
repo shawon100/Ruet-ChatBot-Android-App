@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<RelativeLayout
+	    android:id="@+id/splach_screen"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/splash_bg"
+	    android:visibility="visible" >
+
+	    <TextView
+	        android:id="@+id/error"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/imgLogo"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:text="@string/loading_error"
+	        android:textColor="@color/loading_error"
+	        android:textSize="@dimen/loading_error"
+	        android:visibility="invisible" />
+
+	    <Button
+	        android:id="@+id/reload"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/error"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:onClick="reload"
+	        android:text="@string/reload"
+	        android:visibility="invisible" />
+
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="82dp"
+	        android:gravity="center_horizontal"
+	        android:text="@string/splash_loading_text"
+	        android:textColor="@color/loading_error"
+	        android:textSize="12sp" />
+
+	    <ProgressBar
+	        android:id="@+id/webViewProgress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/reload"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="27dp" />
+
+	    <ImageView
+	        android:id="@+id/imgLogo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/textView1"
+	        android:layout_marginTop="28dp"
+	        android:contentDescription="@string/splash_image_desc"
+	        android:paddingBottom="20px"
+	        android:src="@drawable/ic_logo" />
+
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="31dp"
+	        android:text="RUET Chat Bot"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="@color/loading_error" />
+
+	</RelativeLayout>
+
+	<LinearLayout
+	    android:id="@+id/main_view"
+	    android:orientation="vertical" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	  	android:visibility="invisible">
+	    <WebView android:id="@+id/web_engine" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	</LinearLayout>
+</LinearLayout>

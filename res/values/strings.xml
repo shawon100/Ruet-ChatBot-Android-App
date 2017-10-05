@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">RuetChatBot</string>
+    <string name="splash_loading_text">Loading!!! Please Wait</string>
+    <string name="splash_image_desc">Welcmoe to Solarglob.in!!!</string>
+    <string name="loading_error">Failed to load Solar Glob App. Check internet connection.</string>
+    <string name="reload">Click to Reload</string>
+
+</resources>
